@@ -24,8 +24,7 @@ public class WebSocketConfig {
         new com.corundumstudio.socketio.Configuration();
     config.setHostname(host);
     config.setPort(port);
-    config.setOrigin("*");
-    config.setOrigin("http://127.0.0.1:5500,https://davisycompany.github.io");
+    config.setOrigin("http://127.0.0.1:5500");
     config.setAllowHeaders("Content-Type");
     config.setAllowHeaders("Authorization");
     config.setAllowCustomRequests(true);
