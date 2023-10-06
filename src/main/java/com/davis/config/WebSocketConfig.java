@@ -1,9 +1,11 @@
 package com.davis.config;
 
-import com.corundumstudio.socketio.SocketIOServer;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.corundumstudio.socketio.SocketIOServer;
 
 @Configuration
 public class WebSocketConfig {
@@ -20,6 +22,7 @@ public class WebSocketConfig {
         new com.corundumstudio.socketio.Configuration();
     config.setHostname(host);
     config.setPort(port);
+    config.setOrigin("*");
     return new SocketIOServer(config);
   }
 }
