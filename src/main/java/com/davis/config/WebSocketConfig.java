@@ -26,7 +26,6 @@ public class WebSocketConfig {
     config.setPort(port);
     config.setOrigin("*");
     config.setOrigin("http://127.0.0.1:5500");
-    config.setOrigin("https://davisycompany.github.io/");
     config.setAllowHeaders("Content-Type");
     config.setAllowHeaders("Authorization");
     config.setAllowCustomRequests(true);
