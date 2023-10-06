@@ -20,8 +20,9 @@ public class WebSocketConfig {
 		com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
 		config.setHostname(host);
 		config.setPort(port);
-		config.setOrigin("https://davisycompany.github.io");
-		config.setAllowCustomRequests(true);
-		return new SocketIOServer(config);
+
+		SocketIOServer server = new SocketIOServer(config);
+		
+		return server;
 	}
 }
