@@ -3,9 +3,7 @@ package com.davis.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 
-import com.corundumstudio.socketio.SocketConfig;
 import com.corundumstudio.socketio.SocketIOServer;
 
 @Configuration
@@ -22,6 +20,8 @@ public class WebSocketConfig {
 		com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
 		config.setHostname(host);
 		config.setPort(port);
+		config.setOrigin("https://davisycompany.github.io");
+		config.setAllowCustomRequests(true);
 		return new SocketIOServer(config);
 	}
 }
